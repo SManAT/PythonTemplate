@@ -9,4 +9,4 @@ Features:
 - QSS for a Table
 
 And this is how it looks
-![Galaxy](https://github.com/SManAT/IT-School-Admin/blob/master/Ansible/img/AnsiblePower.png)
+![Galaxy](https://github.com/SManAT/PythonTemplate/blob/main/img/preview.jpg)
