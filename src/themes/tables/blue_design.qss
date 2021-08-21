@@ -1,0 +1,31 @@
+QTableWidget{
+  color:#DCDCDC;
+  background:#fefefe;
+  border:1px solid #242424;
+  alternate-background-color:#f6f6f6;
+  gridline-color:#242424;
+}
+
+QTableWidget::item{
+  color: #666666;
+}
+QTableWidget::item:selected{
+  color:#DCDCDC;
+  background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #484848,stop:1 #383838);
+}
+
+QTableWidget::item:hover{
+  background:#f6f6c6;
+  color:#000000;
+}
+
+QHeaderView::section{
+  text-align:center;
+  background:#362f4b;
+  padding:3px;
+  margin:0px;
+  color:#e0dce4;
+  border:1px solid #000000;
+  border-left-width:0;
+  font-weight: 800;
+}
