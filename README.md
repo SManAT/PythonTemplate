@@ -8,5 +8,5 @@ Features:
 - included SQLite Example
 - QSS for a Table
 
-And this is how it looks
+And this is how it looks  
 ![Galaxy](https://github.com/SManAT/PythonTemplate/blob/main/img/preview.jpg)
