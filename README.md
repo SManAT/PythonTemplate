@@ -1,5 +1,14 @@
 ## Python 3 a Dark Template
 
+```bash
+# start template
+python template.py
+
+# edit an ui File
+pyside6-designer ui-File
+```
+
+
 Features:
 
 - Frameless
