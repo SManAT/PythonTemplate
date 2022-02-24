@@ -554,8 +554,8 @@ class Ui_MainWindow(object):
 "\n"
 "QTextEdit\n"
 "{\n"
-"    background-color: #1e1e1e;\n"
-"    color: #eff0f1;\n"
+"    background-color: #ffffde;\n"
+"    color: #666666;\n"
 "    border: 1px solid #7679"
                         "7C;\n"
 "}\n"
@@ -1377,189 +1377,27 @@ class Ui_MainWindow(object):
         self.verticalLayout = QVBoxLayout()
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.verticalLayout.setSizeConstraint(QLayout.SetMaximumSize)
-        self.tabWidget = QTabWidget(self.content)
-        self.tabWidget.setObjectName(u"tabWidget")
-        self.tab_users = QWidget()
-        self.tab_users.setObjectName(u"tab_users")
-        self.verticalLayout_3 = QVBoxLayout(self.tab_users)
-        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
-        self.table_users = QTableWidget(self.tab_users)
-        if (self.table_users.columnCount() < 4):
-            self.table_users.setColumnCount(4)
-        __qtablewidgetitem = QTableWidgetItem()
-        self.table_users.setHorizontalHeaderItem(0, __qtablewidgetitem)
-        __qtablewidgetitem1 = QTableWidgetItem()
-        self.table_users.setHorizontalHeaderItem(1, __qtablewidgetitem1)
-        __qtablewidgetitem2 = QTableWidgetItem()
-        self.table_users.setHorizontalHeaderItem(2, __qtablewidgetitem2)
-        __qtablewidgetitem3 = QTableWidgetItem()
-        self.table_users.setHorizontalHeaderItem(3, __qtablewidgetitem3)
-        self.table_users.setObjectName(u"table_users")
-        self.table_users.setStyleSheet(u"QTableWidget{\n"
-"  color:#DCDCDC;\n"
-"  background:#fefefe;\n"
-"  border:1px solid #242424;\n"
-"  alternate-background-color:#f6f6f6;\n"
-"  gridline-color:#242424;\n"
-"}\n"
-"\n"
-"QTableWidget::item{\n"
-"  color: #666666;\n"
-"}\n"
-"QTableWidget::item:selected{\n"
-"  color:#DCDCDC;\n"
-"  background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #484848,stop:1 #383838);\n"
-"}\n"
-"\n"
-"QTableWidget::item:hover{\n"
-"  background:#f6f6c6;\n"
-"  color:#000000;\n"
-"}\n"
-"\n"
-"QHeaderView::section{\n"
-"  text-align:center;\n"
-"  background:#362f4b;\n"
-"  padding:3px;\n"
-"  margin:0px;\n"
-"  color:#e0dce4;\n"
-"  border:1px solid #000000;\n"
-"  border-left-width:0;\n"
-"  font-weight: 800;\n"
-"}")
-
-        self.verticalLayout_3.addWidget(self.table_users)
-
-        self.tabWidget.addTab(self.tab_users, "")
-        self.tab_o365 = QWidget()
-        self.tab_o365.setObjectName(u"tab_o365")
-        self.verticalLayout_4 = QVBoxLayout(self.tab_o365)
-        self.verticalLayout_4.setObjectName(u"verticalLayout_4")
-        self.widget = QWidget(self.tab_o365)
+        self.widget = QWidget(self.content)
         self.widget.setObjectName(u"widget")
-        self.horizontalLayout_2 = QHBoxLayout(self.widget)
-        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
-        self.azure_update = QPushButton(self.widget)
-        self.azure_update.setObjectName(u"azure_update")
+        self.textEdit = QTextEdit(self.widget)
+        self.textEdit.setObjectName(u"textEdit")
+        self.textEdit.setGeometry(QRect(80, 70, 501, 291))
 
-        self.horizontalLayout_2.addWidget(self.azure_update)
-
-
-        self.verticalLayout_4.addWidget(self.widget)
-
-        self.tableWidget = QTableWidget(self.tab_o365)
-        self.tableWidget.setObjectName(u"tableWidget")
-
-        self.verticalLayout_4.addWidget(self.tableWidget)
-
-        self.tabWidget.addTab(self.tab_o365, "")
-
-        self.verticalLayout.addWidget(self.tabWidget)
+        self.verticalLayout.addWidget(self.widget)
 
 
         self.gridLayout_3.addLayout(self.verticalLayout, 1, 0, 1, 1)
-
-        self.window_bar_outer = QHBoxLayout()
-        self.window_bar_outer.setObjectName(u"window_bar_outer")
-        self.window_bar_outer.setContentsMargins(-1, 0, 4, 14)
-        self.window_bar_inner = QFrame(self.content)
-        self.window_bar_inner.setObjectName(u"window_bar_inner")
-        sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.window_bar_inner.sizePolicy().hasHeightForWidth())
-        self.window_bar_inner.setSizePolicy(sizePolicy)
-        self.window_bar_inner.setFrameShape(QFrame.StyledPanel)
-        self.window_bar_inner.setFrameShadow(QFrame.Plain)
-        self.horizontalLayout = QHBoxLayout(self.window_bar_inner)
-        self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.horizontalLayout.setContentsMargins(4, 2, 0, 0)
-        self.title_bar = QFrame(self.window_bar_inner)
-        self.title_bar.setObjectName(u"title_bar")
-        self.title_bar_layout = QGridLayout(self.title_bar)
-        self.title_bar_layout.setObjectName(u"title_bar_layout")
-        self.window_title = QLabel(self.title_bar)
-        self.window_title.setObjectName(u"window_title")
-
-        self.title_bar_layout.addWidget(self.window_title, 0, 0, 1, 1)
-
-
-        self.horizontalLayout.addWidget(self.title_bar)
-
-        self.gridWidget_2 = QWidget(self.window_bar_inner)
-        self.gridWidget_2.setObjectName(u"gridWidget_2")
-        sizePolicy1 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Preferred)
-        sizePolicy1.setHorizontalStretch(0)
-        sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(self.gridWidget_2.sizePolicy().hasHeightForWidth())
-        self.gridWidget_2.setSizePolicy(sizePolicy1)
-        self.gridWidget_2.setMinimumSize(QSize(80, 0))
-        self.gridWidget_2.setMaximumSize(QSize(80, 16777215))
-        self.horizontalLayout_3 = QHBoxLayout(self.gridWidget_2)
-        self.horizontalLayout_3.setSpacing(0)
-        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
-        self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
-        self.btn_min = QPushButton(self.gridWidget_2)
-        self.btn_min.setObjectName(u"btn_min")
-        sizePolicy2 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
-        sizePolicy2.setHorizontalStretch(0)
-        sizePolicy2.setVerticalStretch(0)
-        sizePolicy2.setHeightForWidth(self.btn_min.sizePolicy().hasHeightForWidth())
-        self.btn_min.setSizePolicy(sizePolicy2)
-        self.btn_min.setMinimumSize(QSize(20, 20))
-        self.btn_min.setStyleSheet(u"border: none; padding: 2px;")
-        icon = QIcon()
-        icon.addFile(u":/qss_icons/themes/darkgray/icons/window_minimize.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.btn_min.setIcon(icon)
-        self.btn_min.setFlat(True)
-
-        self.horizontalLayout_3.addWidget(self.btn_min)
-
-        self.btn_max = QPushButton(self.gridWidget_2)
-        self.btn_max.setObjectName(u"btn_max")
-        sizePolicy2.setHeightForWidth(self.btn_max.sizePolicy().hasHeightForWidth())
-        self.btn_max.setSizePolicy(sizePolicy2)
-        self.btn_max.setMinimumSize(QSize(20, 20))
-        self.btn_max.setStyleSheet(u"border: none; padding: 2px;")
-        icon1 = QIcon()
-        icon1.addFile(u":/qss_icons/themes/darkgray/icons/window_undock.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.btn_max.setIcon(icon1)
-        self.btn_max.setFlat(True)
-
-        self.horizontalLayout_3.addWidget(self.btn_max)
-
-        self.btn_close = QPushButton(self.gridWidget_2)
-        self.btn_close.setObjectName(u"btn_close")
-        sizePolicy2.setHeightForWidth(self.btn_close.sizePolicy().hasHeightForWidth())
-        self.btn_close.setSizePolicy(sizePolicy2)
-        self.btn_close.setMinimumSize(QSize(20, 20))
-        self.btn_close.setStyleSheet(u"border: none; padding: 2px;")
-        icon2 = QIcon()
-        icon2.addFile(u":/qss_icons/themes/darkgray/icons/window_close.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.btn_close.setIcon(icon2)
-        self.btn_close.setChecked(False)
-        self.btn_close.setFlat(True)
-
-        self.horizontalLayout_3.addWidget(self.btn_close)
-
-
-        self.horizontalLayout.addWidget(self.gridWidget_2)
-
-
-        self.window_bar_outer.addWidget(self.window_bar_inner)
-
-
-        self.gridLayout_3.addLayout(self.window_bar_outer, 0, 0, 1, 1)
 
 
         self.gridLayout.addWidget(self.content, 1, 0, 1, 1)
 
         self.statusBar = QWidget(self.border)
         self.statusBar.setObjectName(u"statusBar")
-        sizePolicy3 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
-        sizePolicy3.setHorizontalStretch(0)
-        sizePolicy3.setVerticalStretch(0)
-        sizePolicy3.setHeightForWidth(self.statusBar.sizePolicy().hasHeightForWidth())
-        self.statusBar.setSizePolicy(sizePolicy3)
+        sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.statusBar.sizePolicy().hasHeightForWidth())
+        self.statusBar.setSizePolicy(sizePolicy)
         self.statusBar.setMinimumSize(QSize(0, 20))
         self.statusBar.setMaximumSize(QSize(16777215, 20))
         self.statusBar_layout = QHBoxLayout(self.statusBar)
@@ -1572,11 +1410,11 @@ class Ui_MainWindow(object):
         self.verticalLayout_5.setContentsMargins(0, -1, -1, -1)
         self.status = QLabel(self.statusBar)
         self.status.setObjectName(u"status")
-        sizePolicy4 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Fixed)
-        sizePolicy4.setHorizontalStretch(0)
-        sizePolicy4.setVerticalStretch(0)
-        sizePolicy4.setHeightForWidth(self.status.sizePolicy().hasHeightForWidth())
-        self.status.setSizePolicy(sizePolicy4)
+        sizePolicy1 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Fixed)
+        sizePolicy1.setHorizontalStretch(0)
+        sizePolicy1.setVerticalStretch(0)
+        sizePolicy1.setHeightForWidth(self.status.sizePolicy().hasHeightForWidth())
+        self.status.setSizePolicy(sizePolicy1)
         self.status.setMinimumSize(QSize(0, 16))
         self.status.setMaximumSize(QSize(16777215, 16))
 
@@ -1595,14 +1433,17 @@ class Ui_MainWindow(object):
         self.gridLayout_2.setContentsMargins(0, 0, 0, 0)
         self.sizegrip = QPushButton(self.gridWidget)
         self.sizegrip.setObjectName(u"sizegrip")
+        sizePolicy2 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
+        sizePolicy2.setHorizontalStretch(0)
+        sizePolicy2.setVerticalStretch(0)
         sizePolicy2.setHeightForWidth(self.sizegrip.sizePolicy().hasHeightForWidth())
         self.sizegrip.setSizePolicy(sizePolicy2)
         self.sizegrip.setMinimumSize(QSize(20, 20))
         self.sizegrip.setMaximumSize(QSize(20, 20))
         self.sizegrip.setStyleSheet(u"border: none;")
-        icon3 = QIcon()
-        icon3.addFile(u":/qss_icons/themes/darkgray/icons/window_crip.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.sizegrip.setIcon(icon3)
+        icon = QIcon()
+        icon.addFile(u":/qss_icons/themes/darkgray/icons/window_crip.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.sizegrip.setIcon(icon)
         self.sizegrip.setFlat(True)
 
         self.gridLayout_2.addWidget(self.sizegrip, 0, 0, 1, 1)
@@ -1613,6 +1454,100 @@ class Ui_MainWindow(object):
 
         self.gridLayout.addWidget(self.statusBar, 2, 0, 1, 1)
 
+        self.window_bar_outer_2 = QFrame(self.border)
+        self.window_bar_outer_2.setObjectName(u"window_bar_outer_2")
+        self.window_bar_outer_2.setMaximumSize(QSize(16777215, 30))
+        self.window_bar_outer = QHBoxLayout(self.window_bar_outer_2)
+        self.window_bar_outer.setObjectName(u"window_bar_outer")
+        self.window_bar_outer.setContentsMargins(4, 1, 4, 1)
+        self.window_bar_inner = QFrame(self.window_bar_outer_2)
+        self.window_bar_inner.setObjectName(u"window_bar_inner")
+        sizePolicy3 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
+        sizePolicy3.setHorizontalStretch(0)
+        sizePolicy3.setVerticalStretch(0)
+        sizePolicy3.setHeightForWidth(self.window_bar_inner.sizePolicy().hasHeightForWidth())
+        self.window_bar_inner.setSizePolicy(sizePolicy3)
+        self.window_bar_inner.setFrameShape(QFrame.StyledPanel)
+        self.window_bar_inner.setFrameShadow(QFrame.Plain)
+        self.horizontalLayout = QHBoxLayout(self.window_bar_inner)
+        self.horizontalLayout.setSpacing(0)
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.horizontalLayout.setContentsMargins(0, 2, 0, 0)
+        self.title_bar = QFrame(self.window_bar_inner)
+        self.title_bar.setObjectName(u"title_bar")
+        self.title_bar_layout = QGridLayout(self.title_bar)
+        self.title_bar_layout.setObjectName(u"title_bar_layout")
+        self.title_bar_layout.setContentsMargins(0, 0, 0, 0)
+        self.window_title = QLabel(self.title_bar)
+        self.window_title.setObjectName(u"window_title")
+
+        self.title_bar_layout.addWidget(self.window_title, 0, 0, 1, 1)
+
+
+        self.horizontalLayout.addWidget(self.title_bar)
+
+        self.gridWidget_2 = QWidget(self.window_bar_inner)
+        self.gridWidget_2.setObjectName(u"gridWidget_2")
+        sizePolicy4 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Preferred)
+        sizePolicy4.setHorizontalStretch(0)
+        sizePolicy4.setVerticalStretch(0)
+        sizePolicy4.setHeightForWidth(self.gridWidget_2.sizePolicy().hasHeightForWidth())
+        self.gridWidget_2.setSizePolicy(sizePolicy4)
+        self.gridWidget_2.setMinimumSize(QSize(80, 0))
+        self.gridWidget_2.setMaximumSize(QSize(80, 16777215))
+        self.horizontalLayout_3 = QHBoxLayout(self.gridWidget_2)
+        self.horizontalLayout_3.setSpacing(0)
+        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+        self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.btn_min = QPushButton(self.gridWidget_2)
+        self.btn_min.setObjectName(u"btn_min")
+        sizePolicy2.setHeightForWidth(self.btn_min.sizePolicy().hasHeightForWidth())
+        self.btn_min.setSizePolicy(sizePolicy2)
+        self.btn_min.setMinimumSize(QSize(20, 20))
+        self.btn_min.setStyleSheet(u"border: none; padding: 2px;")
+        icon1 = QIcon()
+        icon1.addFile(u":/qss_icons/themes/darkgray/icons/window_minimize.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.btn_min.setIcon(icon1)
+        self.btn_min.setFlat(True)
+
+        self.horizontalLayout_3.addWidget(self.btn_min)
+
+        self.btn_max = QPushButton(self.gridWidget_2)
+        self.btn_max.setObjectName(u"btn_max")
+        sizePolicy2.setHeightForWidth(self.btn_max.sizePolicy().hasHeightForWidth())
+        self.btn_max.setSizePolicy(sizePolicy2)
+        self.btn_max.setMinimumSize(QSize(20, 20))
+        self.btn_max.setStyleSheet(u"border: none; padding: 2px;")
+        icon2 = QIcon()
+        icon2.addFile(u":/qss_icons/themes/darkgray/icons/window_undock.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.btn_max.setIcon(icon2)
+        self.btn_max.setFlat(True)
+
+        self.horizontalLayout_3.addWidget(self.btn_max)
+
+        self.btn_close = QPushButton(self.gridWidget_2)
+        self.btn_close.setObjectName(u"btn_close")
+        sizePolicy2.setHeightForWidth(self.btn_close.sizePolicy().hasHeightForWidth())
+        self.btn_close.setSizePolicy(sizePolicy2)
+        self.btn_close.setMinimumSize(QSize(20, 20))
+        self.btn_close.setStyleSheet(u"border: none; padding: 2px;")
+        icon3 = QIcon()
+        icon3.addFile(u":/qss_icons/themes/darkgray/icons/window_close.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.btn_close.setIcon(icon3)
+        self.btn_close.setChecked(False)
+        self.btn_close.setFlat(True)
+
+        self.horizontalLayout_3.addWidget(self.btn_close)
+
+
+        self.horizontalLayout.addWidget(self.gridWidget_2)
+
+
+        self.window_bar_outer.addWidget(self.window_bar_inner)
+
+
+        self.gridLayout.addWidget(self.window_bar_outer_2, 0, 0, 1, 1)
+
 
         self.verticalLayout_2.addWidget(self.border)
 
@@ -1620,30 +1555,21 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.tabWidget.setCurrentIndex(1)
-
-
         QMetaObject.connectSlotsByName(MainWindow)
     # setupUi
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        ___qtablewidgetitem = self.table_users.horizontalHeaderItem(0)
-        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"Nr", None));
-        ___qtablewidgetitem1 = self.table_users.horizontalHeaderItem(1)
-        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"Nachname", None));
-        ___qtablewidgetitem2 = self.table_users.horizontalHeaderItem(2)
-        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Vorname", None));
-        ___qtablewidgetitem3 = self.table_users.horizontalHeaderItem(3)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Email", None));
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_users), QCoreApplication.translate("MainWindow", u"Benutzer", None))
-        self.azure_update.setText(QCoreApplication.translate("MainWindow", u"Update", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_o365), QCoreApplication.translate("MainWindow", u"O365", None))
+        self.textEdit.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">sdfsdfsdf</p></body></html>", None))
+        self.status.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.sizegrip.setText("")
         self.window_title.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.btn_min.setText("")
         self.btn_max.setText("")
         self.btn_close.setText("")
-        self.status.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
-        self.sizegrip.setText("")
     # retranslateUi
 
